@@ -20,6 +20,9 @@ Reserva reserva = new Reserva(diasReservados: 5);
 reserva.CadastrarSuite(suite);
 reserva.CadastrarHospedes(hospedes);
 
+int sobra = suite.Capacidade - reserva.ObterQuantidadeHospedes();
+
 // // Exibe a quantidade de hóspedes e o valor da diária
-// Console.WriteLine($"Hóspedes: {reserva.ObterQuantidadeHospedes()}");
+Console.WriteLine($"Hóspedes: {reserva.ObterQuantidadeHospedes()}");
+Console.WriteLine($"Capacidade máxima da suíte: {suite.Capacidade}, sobrando {sobra} vagas");
 // Console.WriteLine($"Valor diária: {reserva.CalcularValorDiaria()}");
